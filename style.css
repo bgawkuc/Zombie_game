@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    font-family: 'Lora', serif;
+}
+body {
+    background-image: url('images/board-bg.jpg');
+    background-size: 100vw 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cursor {
+    width: 80px;
+    height: 80px;
+    border: 6px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 10;
+
+}
+
+.red-cursor {
+    width: 15px;
+    height: 15px;
+    background-color: red; 
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 27.5px;
+    margin-left: 27.5px;
+}
+
+#mouse {
+    font-size: 18px;
+    color: white;
+    z-index: 10;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.zombie1 {
+    width: auto;
+    z-index: 5;
+    position: absolute;
+    display: none;
+}
+
+.zombie-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.points-container {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    z-index: 10;
+    right: 20px;
+    top: 10px;
+}
+
+.nick-container {
+    position: absolute;
+    margin-top: 10px;
+    color: white;
+   font-size: 50px;
+   left: 20px;
+   top: 10px;
+   
+}
+
+.summary {
+    z-index: 8;
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    background-color: #2d1c48;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 200px;
+    height: 45px;
+    margin-top: 30px;
+    background-color: #c95b78;
+    border: none;
+}
+
+
+input::placeholder,#name {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.btn {
+    width: 120px;
+    height: 30px;
+    margin-top: 15px;
+    background-color: #c95b78 ;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.result {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.highScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.highScore tr {
+    color: white;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.highScoreTitle {
+    text-decoration: underline;
+    padding-top: 30px;
+    color: #c95b78 ;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .nick-container, .points-container {
+        font-size: 30px;
+    }
+}
